@@ -1,3 +1,3 @@
 # eagle-parts
 
-* HLK-PW03 Eacle schematic
+* HLK-PW03 Eagle schematic
