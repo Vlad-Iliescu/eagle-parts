@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.1.0">
+<eagle version="8.1.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -100,6 +100,16 @@
 <smd name="P$11" x="-14" y="-8.4" dx="1.6" dy="1.6" layer="1"/>
 <smd name="P$12" x="-14" y="-5.8" dx="1.6" dy="1.6" layer="1"/>
 </package>
+<package name="P50-B1">
+<smd name="P$1" x="0" y="0" dx="1.4224" dy="0.7112" layer="1"/>
+<wire x1="0" y1="0.34" x2="12.98" y2="0.33" width="0.127" layer="21"/>
+<wire x1="0" y1="0.34" x2="0" y2="-0.33" width="0.127" layer="21"/>
+<wire x1="0" y1="-0.33" x2="12.96" y2="-0.32" width="0.127" layer="21"/>
+<wire x1="13" y1="-0.24" x2="15.65" y2="-0.24" width="0.127" layer="21"/>
+<wire x1="15.65" y1="0.24" x2="16.56" y2="0" width="0.127" layer="21"/>
+<wire x1="16.56" y1="0" x2="15.65" y2="-0.24" width="0.127" layer="21"/>
+<wire x1="13" y1="0.24" x2="15.65" y2="0.24" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="HLK-PW03">
@@ -145,6 +155,15 @@
 <pin name="A6.5M" x="20.32" y="-7.62" length="middle" rot="R180"/>
 <pin name="VIDEO" x="20.32" y="-10.16" length="middle" rot="R180"/>
 <pin name="GND@4" x="20.32" y="-12.7" length="middle" rot="R180"/>
+</symbol>
+<symbol name="P50-B1">
+<wire x1="0" y1="0.254" x2="-7.62" y2="0.254" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="0.254" x2="-7.62" y2="-0.254" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-0.254" x2="0" y2="-0.254" width="0.254" layer="94"/>
+<wire x1="0" y1="-0.254" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="0.254" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-12.7" y2="0" width="0.254" layer="94"/>
+<pin name="&lt;---------" x="2.54" y="0" length="middle" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -203,6 +222,21 @@
 <connect gate="G$1" pin="GND@4" pad="P$1"/>
 <connect gate="G$1" pin="RSSI" pad="P$4"/>
 <connect gate="G$1" pin="VIDEO" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="P50-B1">
+<gates>
+<gate name="G$1" symbol="P50-B1" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="P50-B1">
+<connects>
+<connect gate="G$1" pin="&lt;---------" pad="P$1"/>
 </connects>
 <technologies>
 <technology name=""/>
