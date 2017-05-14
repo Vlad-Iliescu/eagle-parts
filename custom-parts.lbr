@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.1.1">
+<eagle version="8.2.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -127,6 +127,19 @@
 <smd name="P$10" x="11.5" y="4.66" dx="2.1844" dy="1.0668" layer="1"/>
 <smd name="P$11" x="11.5" y="7.2" dx="2.1844" dy="1.0668" layer="1"/>
 </package>
+<package name="DSN-MINI-360">
+<wire x1="-8" y1="6" x2="9.5" y2="6" width="0.127" layer="21"/>
+<wire x1="9.5" y1="6" x2="9.5" y2="-5.3" width="0.127" layer="21"/>
+<wire x1="9.5" y1="-5.3" x2="-8" y2="-5.3" width="0.127" layer="21"/>
+<wire x1="-8" y1="-5.3" x2="-8" y2="6" width="0.127" layer="21"/>
+<pad name="P$1" x="-7" y="5" drill="1" shape="square"/>
+<pad name="P$2" x="8.5" y="5" drill="1" shape="square"/>
+<pad name="P$3" x="8.5" y="-4.3" drill="1" shape="square"/>
+<pad name="P$4" x="-7" y="-4.3" drill="1" shape="square"/>
+<text x="-0.9" y="0" size="1.27" layer="1">----&gt;</text>
+<text x="-5" y="-5" size="1.27" layer="1">DSN-MINI-360</text>
+<text x="-3" y="4" size="1.27" layer="1">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
 <symbol name="HLK-PW03">
@@ -200,6 +213,18 @@
 <wire x1="-12.7" y1="-7.62" x2="12.7" y2="-7.62" width="0.254" layer="94"/>
 <text x="-12.7" y="10.16" size="1.778" layer="94">&gt;NAME</text>
 <text x="5.08" y="10.16" size="1.778" layer="94">FX758</text>
+</symbol>
+<symbol name="DSN-MINI-360">
+<wire x1="-7.62" y1="5.08" x2="7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-5.08" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-5.08" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
+<pin name="IN+" x="-12.7" y="2.54" length="middle"/>
+<pin name="IN-" x="-12.7" y="-2.54" length="middle"/>
+<pin name="OUT+" x="12.7" y="2.54" length="middle" rot="R180"/>
+<pin name="OUT-" x="12.7" y="-2.54" length="middle" rot="R180"/>
+<text x="-7.62" y="5.08" size="1.778" layer="94">&gt;NAME</text>
+<text x="-7.62" y="-7.62" size="1.778" layer="94">DSN-MINI-360</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -328,6 +353,39 @@
 <connect gate="G$1" pin="GND@3" pad="P$3"/>
 <connect gate="G$1" pin="GND@4" pad="P$1"/>
 <connect gate="G$1" pin="VIN" pad="P$5"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DSN-MINI-360">
+<description>&lt;h3&gt;DSN-MINI-360&lt;/h3&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;td&gt;Module Properties:&lt;/td&gt;&lt;td&gt;Non-isolated step-down module (BUCK)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Rectification:&lt;/td&gt;&lt;td&gt; Synchronous rectification&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Input voltage:&lt;/td&gt;&lt;td&gt; DC 4.75V-20V(23V Max, not recommended!)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Output voltage:&lt;/td&gt;&lt;td&gt; DC 1.0V-17V (Adjustable, Output &lt; Input)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Output current:&lt;/td&gt;&lt;td&gt; Rated current 1.8A (3A MAX, can not be prolonged)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Switching Frequency:&lt;/td&gt;&lt;td&gt; 340KHz.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Output ripple:&lt;/td&gt;&lt;td&gt;30mV(no-load)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Load regulation:&lt;/td&gt;&lt;td&gt;±0.5%&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Voltage regulation:&lt;/td&gt;&lt;td&gt;±2.5%&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Short circuit protection:&lt;/td&gt;&lt;td&gt; No(Please do not short-circuit)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Input Reverse protection:&lt;/td&gt;&lt;td&gt; No(Can not be reversed)&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</description>
+<gates>
+<gate name="G$1" symbol="DSN-MINI-360" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="DSN-MINI-360">
+<connects>
+<connect gate="G$1" pin="IN+" pad="P$1"/>
+<connect gate="G$1" pin="IN-" pad="P$4"/>
+<connect gate="G$1" pin="OUT+" pad="P$2"/>
+<connect gate="G$1" pin="OUT-" pad="P$3"/>
 </connects>
 <technologies>
 <technology name=""/>
